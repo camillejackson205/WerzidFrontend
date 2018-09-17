@@ -28,7 +28,7 @@ export class RegistrationComponent implements OnInit {
   onSubmit(){
     console.log(this.registerform.value);
     this.as.register(this.registerform.value)
-    .subscribe((data) => console.log( data));
+    .subscribe((data) => console.log(data));
   }
 
 }
