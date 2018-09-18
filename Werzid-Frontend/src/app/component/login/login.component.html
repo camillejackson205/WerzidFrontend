@@ -11,7 +11,7 @@
       </mat-form-field>
     </div>
   </div>
-<button mat-button class="nav-btn" color="white" type="submit">Login</button>
+<button mat-button class="nav-btn" color="white" type="submit" routerLink="/home">Login</button>
 </form>
 <br>
-<button mat-button class="nav-btn" color="white" type="submit" routerLink="/registration">New User?</button> 
+<button mat-button class="nav-btn" color="white" type="submit" [routerLink]="['home']">New User?</button> 
