@@ -9,12 +9,11 @@ import { HttpClientModule } from '@angular/common/http';
 
 import { AppComponent } from './app.component';
 import { RegistrationComponent } from './component/registration/registration.component';
-
-// Services
-import { AuthService } from './services/auth.service';
 import { HeaderComponent } from './component/header/header.component';
 import { LoginComponent } from './component/login/login.component';
 
+// Services
+import { AuthService } from './services/auth.service';
 
 const routes = [
   { path: 'registration', component: RegistrationComponent },
