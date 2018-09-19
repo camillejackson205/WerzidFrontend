@@ -21,7 +21,7 @@ export class RegistrationComponent implements OnInit {
     this.registerform = this.fb.group({
       email: new FormControl,
       password: new FormControl,
-     confirmPassword: new FormControl
+      confirmPassword: new FormControl
     });
   }
 
