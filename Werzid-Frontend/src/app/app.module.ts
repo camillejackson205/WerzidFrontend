@@ -12,6 +12,8 @@ import { RegistrationComponent } from './component/registration/registration.com
 import { HeaderComponent } from './component/header/header.component';
 import { LoginComponent } from './component/login/login.component';
 import { HomeComponent } from './component/home/home.component';
+import { FaqComponent } from './component/faq/faq.component';
+import { ContactComponent } from './component/contact/contact.component';
 
 // Services
 import { AuthService } from './services/auth.service';
@@ -19,7 +21,9 @@ import { AuthService } from './services/auth.service';
 const routes = [
   { path: 'registration', component: RegistrationComponent },
   { path: 'login', component: LoginComponent },
-  { path: 'home', component: HomeComponent }
+  { path: 'home', component: HomeComponent },
+  { path: 'faq', component: FaqComponent },
+  { path: 'contact', component: ContactComponent }
 ];
 
 @NgModule({
@@ -29,6 +33,8 @@ const routes = [
     HeaderComponent,
     LoginComponent,
     HomeComponent,
+    FaqComponent,
+    ContactComponent,
   ],
   imports: [
     BrowserModule,
