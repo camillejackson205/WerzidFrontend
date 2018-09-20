@@ -1,19 +1,21 @@
- <div>
-  <form action="https://formspree.io/camillejackson205@gmail.com" method="POST">
+  <div>
+  <form ngNoForm action="https://formspree.io/camillejackson205@gmail.com" method="POST">
   <div>
     <div>
       <mat-form-field>
-        <input matInput placeholder="Your email">
+        <input name="email" type="text" matInput placeholder="Your email">
       </mat-form-field>
     </div>
     <div>
         <mat-form-field>
-            <textarea matInput placeholder="Your message"></textarea> 
+            <textarea name="message" type="text" matInput placeholder="Your message"></textarea> 
         </mat-form-field>
     </div>
   </div>
   <button mat-button class="nav-btn" color="white" type="submit">Send</button>
   </form>
-</div> 
+</div>  
+
+
 
 
