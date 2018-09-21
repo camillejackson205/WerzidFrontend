@@ -17,33 +17,34 @@
 }
 
 #hr{
-    width: 30%;
+    width: 40%;
 }
 
 .sociallinks{
     width: 90%;
-    height: 500px;
+    height: 630px;
 }
 .wrapper {
-    position: relative;
+    position: absolute;
+    top: 60%;
  }
 
  .wrapper .fa {
     position: absolute;
-    top: 48%;
-    left: 55%;
+    bottom: 116%;
+    left: 80%;
  }
 
 .fb{
     position: absolute;
-    top: 150%;
-    left: 20%;
+    top: 135%;
+    left: 40%;
 }
 
 .fa {
-    padding: 20px;
+    padding: 40px;
     font-size: 30px;
-    width: 40px;
+    width: 50px;
     text-align: center;
     text-decoration: none;
 }
@@ -55,4 +56,11 @@
 .fa-facebook {
     background: #3B5998;
     color: white;
+}
+
+.fbmessage{
+    position: absolute;
+    top: 25%;
+    left: 76%;
+    
 }
