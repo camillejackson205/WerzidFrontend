@@ -18,6 +18,7 @@ import { ContactComponent } from './component/contact/contact.component';
 
 // Services
 import { AuthService } from './services/auth.service';
+import {FormsModule} from '@angular/forms';
 
 const routes = [
   { path: 'registration', component: RegistrationComponent },
