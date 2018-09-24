@@ -1,0 +1,66 @@
+.contactform{
+    position: absolute; 
+    top: 300px; 
+    left: 0; 
+    width: 100%;
+}
+.contact{    
+        position: relative; 
+        width: 100%; 
+}
+
+.contactus{
+    position: absolute; 
+    top: 150px; 
+    left: 0; 
+    width: 100%;
+}
+
+#hr{
+    width: 40%;
+}
+
+.sociallinks{
+    width: 90%;
+    height: 630px;
+}
+.wrapper {
+    position: absolute;
+    top: 60%;
+ }
+
+ .wrapper .fa {
+    position: absolute;
+    bottom: 116%;
+    left: 80%;
+ }
+
+.fb{
+    position: absolute;
+    top: 135%;
+    left: 40%;
+}
+
+.fa {
+    padding: 40px;
+    font-size: 30px;
+    width: 50px;
+    text-align: center;
+    text-decoration: none;
+}
+
+.fa:hover {
+    opacity: 0.7;
+}
+
+.fa-facebook {
+    background: #3B5998;
+    color: white;
+}
+
+.fbmessage{
+    position: absolute;
+    top: 25%;
+    left: 76%;
+    
+}
