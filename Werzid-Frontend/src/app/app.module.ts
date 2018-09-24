@@ -3,8 +3,9 @@ import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
 import { MatToolbarModule, MatButtonModule, MatFormFieldModule, MatInputModule, MatTableModule } from '@angular/material';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { ReactiveFormsModule } from '@angular/forms';
+import { FormsModule,ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+
 // Components:
 
 import { AppComponent } from './app.component';
@@ -36,6 +37,7 @@ const routes = [
     HomeComponent,
     FaqComponent,
     ContactComponent,
+    
   ],
   imports: [
     BrowserModule,
@@ -47,8 +49,8 @@ const routes = [
     BrowserAnimationsModule,
     RouterModule.forRoot(routes),
     ReactiveFormsModule,
-    HttpClientModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule
   ],
   providers: [ AuthService ],
   bootstrap: [AppComponent]
