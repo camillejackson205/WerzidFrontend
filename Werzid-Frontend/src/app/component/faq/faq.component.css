@@ -3,6 +3,12 @@
     margin: 7% auto;
     text-align: left;
 }
+#coName {
+    color: dimgrey;
+}
+#about {
+    margin-top: 0;
+}
 .subContent {
     padding-left: 2em;
 }
