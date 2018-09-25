@@ -1,12 +1,11 @@
 .contactform{
-    position: absolute; 
-    top: 300px; 
-    left: 0; 
-    width: 100%;
+    width: 65%;
+    margin: 5% auto;
+    text-align: center;
 }
 .contact{    
-        position: relative; 
-        width: 100%; 
+    position: relative; 
+    width: 100%; 
 }
 
 .contactus{
@@ -14,6 +13,9 @@
     top: 150px; 
     left: 0; 
     width: 100%;
+}
+#textInput {
+    width: 75%;
 }
 
 #hr{
