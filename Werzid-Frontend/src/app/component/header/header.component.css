@@ -1,17 +1,26 @@
 .example-fill-remaining-space{
     flex: 1 1 auto;
-    }
-    
-    .nav-btn{
+}
+#toolbar{
+    padding: 0 15%;
+    background-color: rgba(255,255,255,.6);
+    height: 120px;
+}
+.nav-btn{
     margin-right: 0.5em;
-    background-color: white;
+    font-size: 1em;
     border: none;
-    }
-    
-    .werzid{
-        color: white;
-    }
-    .toolbar{
-        background-color: #272930;
-    }
-    
+    color: grey;
+}
+.nav-btn:hover{
+    color: black;
+}
+.werzid{
+    color: black;
+}
+.werzid img{
+    width: 225px;
+}
+.toolbar{
+    background-color: #272930;
+}
