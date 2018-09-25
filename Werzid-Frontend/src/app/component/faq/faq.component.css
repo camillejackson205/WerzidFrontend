@@ -1,0 +1,14 @@
+.faqSection {
+    width: 85%;
+    margin: 7% auto;
+    text-align: left;
+}
+.subContent {
+    padding-left: 2em;
+}
+.sectionHeader{
+    text-align: center;
+}
+#youtubeVideo {
+    border: solid 1px black;
+}
