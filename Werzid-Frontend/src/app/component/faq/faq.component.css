@@ -6,13 +6,18 @@
 #coName {
     color: dimgrey;
 }
+#werzidImage img {
+    padding: 15px;
+    border-radius: 50%;
+    float: right;
+}
 #about {
     margin-top: 0;
 }
 .subContent {
     padding-left: 2em;
 }
-.sectionHeader{
+.sectionHeader {
     text-align: center;
 }
 #youtubeVideo {
