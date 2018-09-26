@@ -30,6 +30,5 @@ export class RegistrationComponent implements OnInit {
     this.as.register(this.registerform.value)
     .subscribe(()=>this.as.login(this.registerform.value));
   }
-
 }
 
