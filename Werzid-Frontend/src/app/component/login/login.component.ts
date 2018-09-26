@@ -25,12 +25,11 @@ export class LoginComponent implements OnInit {
     });
   }
 
-  onSubmit() {
+  onSubmit(){
     console.log(this.loginForm.value);
-    this.as.login(this.loginForm.value)
-    .subscribe((data) => console.log(data));
+    this.as.register(this.loginForm.value)
+    .subscribe(()=>this.as.login(this.loginForm.value));
   }
-
 }
 
 
