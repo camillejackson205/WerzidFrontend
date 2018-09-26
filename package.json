@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
-    "start": "serve -s dist/werzid-frontend",
+    "start": "serve -s dist",
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
