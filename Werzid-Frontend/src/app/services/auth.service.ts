@@ -35,18 +35,18 @@ export class AuthService {
       this.router.navigate(['/']);
     });
   }
-  
-    currentUser(): Observable<Object> {
-      if (!localStorage.getItem('id_token')) { return new Observable(observer => observer.next(false)); }
-  
-      return this.http.get(`${Api_Url}/api/Account/UserInfo`, { headers: this.setHeader() });
-    }
 
-  logOut(): Observable<Object> {
+  currentUser(): Observable<Object> {
+    if (!localStorage.getItem('id_token')) { return new Observable(observer => observer.next(false)); }
+
+    return this.http.get(`${Api_Url}/api/Account/UserInfo`, { headers: this.setHeader() });
+  }
+
+  logOut() {
     localStorage.clear();
     this.isLoggedIn.next(false);
 
-    return this.http.post(`${Api_Url}/api/Account/Logout`, { headers: this.setHeader() });
+    this.http.post(`${Api_Url}/api/Account/Logout`, { headers: this.setHeader() });
     this.router.navigate(['/login']);
   }
 
