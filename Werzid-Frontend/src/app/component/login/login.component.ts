@@ -2,7 +2,6 @@ import { Component, OnInit, createPlatformFactory } from '@angular/core';
 import { FormGroup, FormControl, FormBuilder } from '@angular/forms';
 import { AuthService } from '../../services/auth.service';
 
-
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
@@ -25,12 +24,10 @@ export class LoginComponent implements OnInit {
     });
   }
 
-  onSubmit() {
+  onSubmit(){
     console.log(this.loginForm.value);
-    this.as.login(this.loginForm.value)
-    .subscribe((data) => console.log(data));
+    this.as.login(this.loginForm.value);
   }
-
 }
 
 

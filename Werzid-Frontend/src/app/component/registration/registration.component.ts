@@ -9,7 +9,7 @@ import { AuthService } from '../../services/auth.service';
 })
 export class RegistrationComponent implements OnInit {
 
-  registerform: FormGroup;
+  private registerform: FormGroup;
 
   constructor(public fb: FormBuilder, public as: AuthService) { }
 
@@ -28,7 +28,7 @@ export class RegistrationComponent implements OnInit {
   onSubmit(){
     console.log(this.registerform.value);
     this.as.register(this.registerform.value)
-    .subscribe((data) => console.log(data));
+    .subscribe(()=>this.as.login(this.registerform.value));
   }
 
 }
