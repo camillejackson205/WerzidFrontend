@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { TransactionsService } from '../../../services/transactions.service';
-import { transaction } from '../../../models/Transactions';
+import { transaction } from '../../../models/transactions';
 import { MatTableDataSource } from '@angular/material';
 
 @Component({
