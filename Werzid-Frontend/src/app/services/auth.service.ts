@@ -29,6 +29,7 @@ export class AuthService {
 
     return this.http.post(`${Api_Url}/Token`, str).subscribe((token: Token) => {
       this.userInfo = token;
+      console.log(token);
       localStorage.setItem('id_token', token.access_token);
       this.isLoggedIn.next(true);
       this.router.navigate(['/']);
