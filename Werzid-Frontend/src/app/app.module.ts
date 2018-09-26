@@ -13,7 +13,8 @@ import { HeaderComponent } from './component/header/header.component';
 import { LoginComponent } from './component/login/login.component';
 import { HomeComponent } from './component/home/home.component';
 import { FaqComponent } from './component/faq/faq.component';
-import { ContactComponent } from './component/contact/contact.component'; 
+import { ContactComponent } from './component/contact/contact.component';
+import { TextareaAutosizeModule } from 'ngx-textarea-autosize';
 
 // Services
 import { AuthService } from './services/auth.service';
@@ -26,9 +27,10 @@ const routes = [
   { path: 'home', component: HomeComponent },
   { path: 'faq', component: FaqComponent },
   { path: 'contact', component: ContactComponent },
-  { path: 'transactions', component: TransactionsIndexComponent}
+  { path: 'transactions', component: TransactionsIndexComponent},
+  { path: '', component: HomeComponent },
 ];
-
+ 
 @NgModule({
   declarations: [
     AppComponent,
@@ -53,6 +55,7 @@ const routes = [
     ReactiveFormsModule,
     FormsModule,
     HttpClientModule,
+    TextareaAutosizeModule
   ],
   providers: [
      AuthService,
