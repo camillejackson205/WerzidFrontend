@@ -1,4 +1,10 @@
 /* You can add global styles to this file, and also import other style files */
 @import '../node_modules/@angular/material/prebuilt-themes/indigo-pink.css';
 
-
+body {
+    background-image: url("http://werzid.com/wp-content/uploads/2016/10/cropped-cropped-IMG_0468.jpg");
+    background-position: center bottom;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    height: 100%;
+}

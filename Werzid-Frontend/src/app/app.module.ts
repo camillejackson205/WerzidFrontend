@@ -15,6 +15,7 @@ import { LoginComponent } from './component/login/login.component';
 import { HomeComponent } from './component/home/home.component';
 import { FaqComponent } from './component/faq/faq.component';
 import { ContactComponent } from './component/contact/contact.component';
+import { TextareaAutosizeModule } from 'ngx-textarea-autosize';
 
 // Services
 import { AuthService } from './services/auth.service';
@@ -24,9 +25,10 @@ const routes = [
   { path: 'login', component: LoginComponent },
   { path: 'home', component: HomeComponent },
   { path: 'faq', component: FaqComponent },
-  { path: 'contact', component: ContactComponent }
+  { path: 'contact', component: ContactComponent },
+  { path: '', component: HomeComponent },
 ];
-
+ 
 @NgModule({
   declarations: [
     AppComponent,
@@ -49,7 +51,8 @@ const routes = [
     RouterModule.forRoot(routes),
     ReactiveFormsModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    TextareaAutosizeModule
   ],
   providers: [ AuthService ],
   bootstrap: [AppComponent]

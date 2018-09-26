@@ -1,0 +1,25 @@
+.faqSection {
+    width: 85%;
+    margin: 7% auto;
+    text-align: left;
+}
+#coName {
+    color: dimgrey;
+}
+#werzidImage img {
+    padding: 15px;
+    border-radius: 50%;
+    float: right;
+}
+#about {
+    margin-top: 0;
+}
+.subContent {
+    padding-left: 2em;
+}
+.sectionHeader {
+    text-align: center;
+}
+#youtubeVideo {
+    border: solid 1px black;
+}
