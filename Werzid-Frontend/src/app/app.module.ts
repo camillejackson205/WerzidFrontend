@@ -7,24 +7,26 @@ import { FormsModule,ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 
 // Components:
-
 import { AppComponent } from './app.component';
 import { RegistrationComponent } from './component/registration/registration.component';
 import { HeaderComponent } from './component/header/header.component';
 import { LoginComponent } from './component/login/login.component';
 import { HomeComponent } from './component/home/home.component';
 import { FaqComponent } from './component/faq/faq.component';
-import { ContactComponent } from './component/contact/contact.component';
+import { ContactComponent } from './component/contact/contact.component'; 
 
 // Services
 import { AuthService } from './services/auth.service';
+import { TransactionsService } from './services/transactions.service';
+import { TransactionsIndexComponent } from './component/transactions/transactions-index/transactions-index.component';
 
 const routes = [
   { path: 'registration', component: RegistrationComponent },
   { path: 'login', component: LoginComponent },
   { path: 'home', component: HomeComponent },
   { path: 'faq', component: FaqComponent },
-  { path: 'contact', component: ContactComponent }
+  { path: 'contact', component: ContactComponent },
+  { path: 'transactions', component: TransactionsIndexComponent}
 ];
 
 @NgModule({
@@ -36,7 +38,8 @@ const routes = [
     HomeComponent,
     FaqComponent,
     ContactComponent,
-    
+    TransactionsIndexComponent,  
+
   ],
   imports: [
     BrowserModule,
@@ -49,9 +52,14 @@ const routes = [
     RouterModule.forRoot(routes),
     ReactiveFormsModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
   ],
-  providers: [ AuthService ],
+  providers: [
+     AuthService,
+     TransactionsService 
+   ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
+
+

@@ -1,0 +1,50 @@
+<h1>Index</h1>
+<a mat-raised-button color="primary">Create New</a>
+<div>
+  <mat-table #table [dataSource] = "dataSource">
+    <mat-header-row *matHeaderRowDef = "columnNames"></mat-header-row>
+    <mat-row *matRowDef = "let row; columns: columnNames"></mat-row>
+
+    <ng-container matColumnDef="details">
+      <mat-header-cell *matHeaderCellDef class="matColumnSize"></mat-header-cell>
+      <mat-cell *matCellDef="let transaction"> <i class="material-icons">library_books</i> </mat-cell>
+    </ng-container>
+
+    <ng-container matColumnDef="TransactionID">
+        <mat-header-cell *matHeaderCellDef>Transaction</mat-header-cell>
+        <mat-cell *matCellDef="let transaction">{{transaction.TransactionID}}</mat-cell>
+    </ng-container>
+
+    <ng-container matColumnDef="Quantity">
+        <mat-header-cell *matHeaderCellDef>Quantity</mat-header-cell>
+        <mat-cell *matCellDef="let transaction">{{transaction.Quantity}}</mat-cell>
+    </ng-container>
+
+    <ng-container matColumnDef="TotalPrice">
+        <mat-header-cell *matHeaderCellDef>TotalPrice</mat-header-cell>
+        <mat-cell *matCellDef="let transaction">{{transaction.TotalPrice}}</mat-cell>
+    </ng-container>
+
+    <ng-container matColumnDef="Date">
+        <mat-header-cell *matHeaderCellDef>Date</mat-header-cell>
+        <mat-cell *matCellDef="let transaction">{{transaction.Date}}</mat-cell>
+    </ng-container>
+
+    <ng-container matColumnDef="Purchased">
+        <mat-header-cell *matHeaderCellDef>Purchased</mat-header-cell>
+        <mat-cell *matCellDef="let transaction">
+          <button mat-icon-button disabled>
+            <i class="material-icons" (click) = "Purchased(transaction, $event)" disabled>star</i>
+          </button>
+          </mat-cell>
+    </ng-container>
+
+    <ng-container matColumnDef="buttons">
+        <mat-header-cell *matHeaderCellDef></mat-header-cell>
+        <mat-cell *matCellDef="let transaction">            
+         <i mat-icon class="material-icons">edit</i>
+         <i class="material-icons">delete</i>
+        </mat-cell>
+    </ng-container>  
+  </mat-table>
+</div>
