@@ -1,6 +1,6 @@
 <h1>Index</h1>
 <a mat-raised-button color="primary">Create New</a>
-<div>
+
   <mat-table #table [dataSource] = "dataSource">
     <mat-header-row *matHeaderRowDef = "columnNames"></mat-header-row>
     <mat-row *matRowDef = "let row; columns: columnNames"></mat-row>
@@ -47,4 +47,4 @@
         </mat-cell>
     </ng-container>  
   </mat-table>
-</div>
+
