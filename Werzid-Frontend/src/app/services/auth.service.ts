@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Token } from '../models/token';
+import { Router } from '@angular/router';
 
 const Api_Url = "http://localhost:50801";
 
@@ -9,7 +10,7 @@ const Api_Url = "http://localhost:50801";
 })
 export class AuthService {
 
-  constructor(public http: HttpClient) { }
+  constructor(public http: HttpClient, private router: Router) { }
 
   showUp() {
     console.log("here");
@@ -23,6 +24,9 @@ export class AuthService {
     const str =
       `grant_type=password&username=${encodeURI(loginInfo.email)}&password=${encodeURI(loginInfo.password)}`;
 
-    return this.http.post(`${Api_Url}/Token`, str).subscribe((token: Token) => { localStorage.setItem('id_token', token.access_token) });
+    return this.http.post(`${Api_Url}/Token`, str).subscribe((token: Token) => {
+      localStorage.setItem('id_token', token.access_token);
+      this.router.navigate(['/']);
+    });
   }
 }
