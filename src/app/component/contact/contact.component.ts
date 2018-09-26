@@ -27,7 +27,5 @@ export class ContactComponent implements OnInit {
 
   onSubmit() {
     console.log(this.contactForm.value);
-    this.as.login(this.contactForm.value)
-    .subscribe((data) => console.log(data));
   }
 }
