@@ -3,8 +3,7 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Token } from '../models/token';
 import { Router } from '@angular/router';
 import { Observable, Subject } from 'rxjs';
-
-const Api_Url = "http://localhost:50801";
+import { Api_Url } from '../../environments/environment.prod';
 
 @Injectable({
   providedIn: 'root'

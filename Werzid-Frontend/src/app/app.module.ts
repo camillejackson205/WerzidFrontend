@@ -7,7 +7,6 @@ import { FormsModule,ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 
 // Components:
-
 import { AppComponent } from './app.component';
 import { RegistrationComponent } from './component/registration/registration.component';
 import { HeaderComponent } from './component/header/header.component';
@@ -19,6 +18,8 @@ import { TextareaAutosizeModule } from 'ngx-textarea-autosize';
 
 // Services
 import { AuthService } from './services/auth.service';
+import { TransactionsService } from './services/transactions.service';
+import { TransactionsIndexComponent } from './component/transactions/transactions-index/transactions-index.component';
 
 const routes = [
   { path: 'registration', component: RegistrationComponent },
@@ -26,6 +27,7 @@ const routes = [
   { path: 'home', component: HomeComponent },
   { path: 'faq', component: FaqComponent },
   { path: 'contact', component: ContactComponent },
+  { path: 'transactions', component: TransactionsIndexComponent},
   { path: '', component: HomeComponent },
 ];
  
@@ -38,7 +40,8 @@ const routes = [
     HomeComponent,
     FaqComponent,
     ContactComponent,
-    
+    TransactionsIndexComponent,  
+
   ],
   imports: [
     BrowserModule,
@@ -54,7 +57,12 @@ const routes = [
     HttpClientModule,
     TextareaAutosizeModule
   ],
-  providers: [ AuthService ],
+  providers: [
+     AuthService,
+     TransactionsService 
+   ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
+
+
