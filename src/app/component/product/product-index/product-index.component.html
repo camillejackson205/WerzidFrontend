@@ -6,40 +6,40 @@
   <mat-table #table [dataSource]="dataSource">
     <mat-header-row *matHeaderRowDef="columnNames"></mat-header-row>
     <mat-row *matRowDef="let row; columns: columnNames;"></mat-row>
-  
+
     <ng-container matColumnDef="details">
       <mat-header-cell *matHeaderCellDef class="matColumnSize"></mat-header-cell>
-      <mat-cell *matCellDef="let note" routerLink="/product/detail/{{product.ProductId}}">
-      <i class="marterial-icon">library_books</i>
+      <mat-cell *matCellDef="let product" routerLink="product/detail/{{product.ProductId}}">
+        <i class="material-icons">library_books</i>
       </mat-cell>
     </ng-container>
 
-   <ng-container matColumnDef="ProductId">
-     <mat-header-cell *matHeaderCellDef> Product ID </mat-header-cell>
-     <mat-cell *matCellDef="let note"> {{product.ProductId}} </mat-cell>
-   </ng-container> 
+    <ng-container matColumnDef="ProductID">
+      <mat-header-cell *matHeaderCellDef> Product ID </mat-header-cell>
+      <mat-cell *matCellDef="let product"> {{product.ProductID}} </mat-cell>
+    </ng-container>
 
-   <ng-container matColumnDef="Name">
-    <mat-header-cell *matHeaderCellDef> Product ID </mat-header-cell>
-    <mat-cell *matCellDef="let note"> {{product.Name}} </mat-cell>
-  </ng-container>
+    <ng-container matColumnDef="Name">
+      <mat-header-cell *matHeaderCellDef> Product Name </mat-header-cell>
+      <mat-cell *matCellDef="let product"> {{product.ProductName}} </mat-cell>
+    </ng-container>
 
-  <ng-container matColumnDef="Price">
-    <mat-header-cell *matHeaderCellDef> Product ID </mat-header-cell>
-    <mat-cell *matCellDef="let note"> {{product.Price}} </mat-cell>
-  </ng-container>
+    <ng-container matColumnDef="Price">
+      <mat-header-cell *matHeaderCellDef> Product Price </mat-header-cell>
+      <mat-cell *matCellDef="let product"> {{product.ProductPrice}} </mat-cell>
+    </ng-container>
 
-  <ng-container matColumnDef="Description">
-    <mat-header-cell *matHeaderCellDef> Product ID </mat-header-cell>
-    <mat-cell *matCellDef="let note"> {{product.Description}} </mat-cell>
-  </ng-container>
+    <ng-container matColumnDef="Description">
+      <mat-header-cell *matHeaderCellDef> Product Description </mat-header-cell>
+      <mat-cell *matCellDef="let product"> {{product.ProductDescription}} </mat-cell>
+    </ng-container>
 
-  <ng-container matColumnDef="buttons">
-    <mat-header-cell *matHeaderCellDef> </mat-header-cell>
-    <mat-cell *matCellDef="let note"> 
-      <i mat-icon class="material-icons">Edit</i>
-      <i class="material-icons">Delete</i>      
-    </mat-cell>
-  </ng-container>
+    <ng-container matColumnDef="buttons">
+      <mat-header-cell *matHeaderCellDef> </mat-header-cell>
+      <mat-cell *matCellDef="let product">
+        <i mat-icon class="material-icons">Edit</i>
+        <i class="material-icons">Delete</i>
+      </mat-cell>
+    </ng-container>
   </mat-table>
 </div>

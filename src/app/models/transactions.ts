@@ -1,4 +1,4 @@
-export interface transaction{
+export interface Transaction{
     TransactionID: number;
     OwnerID: number;
     Quantity: number;
