@@ -19,12 +19,10 @@ private getHeaders() {
 }
 
 createProduct(product: Product) {
-  return this._http.post(`${Api_Url}/Products`, product, { headers: this.getHeaders()});
+  return this._http.post(`${Api_Url}api/Product`, product, { headers: this.getHeaders()});
 }
 
 getProduct(id: string) {
-  return this._http.get(`${Api_Url}/Products/${id}`, { headers: this.getHeaders() });
+  return this._http.get(`${Api_Url}api/Product/${id}`, { headers: this.getHeaders() });
 }
 }
-
-
