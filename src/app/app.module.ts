@@ -20,6 +20,7 @@ import { TextareaAutosizeModule } from 'ngx-textarea-autosize';
 import { AuthService } from './services/auth.service';
 import { TransactionsService } from './services/transactions.service';
 import { TransactionsIndexComponent } from './component/transactions/transactions-index/transactions-index.component';
+import { FooterComponent } from './component/footer/footer.component';
 
 const routes = [
   { path: 'registration', component: RegistrationComponent },
@@ -40,7 +41,8 @@ const routes = [
     HomeComponent,
     FaqComponent,
     ContactComponent,
-    TransactionsIndexComponent,  
+    TransactionsIndexComponent,
+    FooterComponent,  
 
   ],
   imports: [
