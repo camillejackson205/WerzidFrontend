@@ -7,13 +7,18 @@ import { Api_Url } from '../../environments/environment.prod';
 })
 export class TransactionsService {
 
-  constructor(private  http: HttpClient ) { }
+  constructor(private http: HttpClient ) { }
 
   getTransactions(){
-    return this.http.get(`${Api_Url}/Transactions`, {headers: this.getHeaders() });
+    console.log(localStorage);
+    return this.http.get(`${Api_Url}/api/Transaction`, {headers: this.getHeaders() });
   }
 
   private getHeaders(){
-    return new HttpHeaders().set('Authorization', `Bearer $${localStorage.getItem('id._token')}`);
+    var path: string;
+    path = `Bearer ${localStorage.getItem('id_token')}`;
+    console.log(path);
+    return new HttpHeaders().set('Authorization', `Bearer ${localStorage.getItem('id_token')}`);
+    // return new HttpHeaders().set('Authorization', `Bearer ${localStorage.getItem('id_token')}`);
   }
 }
