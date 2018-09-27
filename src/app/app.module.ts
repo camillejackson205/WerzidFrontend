@@ -20,7 +20,12 @@ import { TextareaAutosizeModule } from 'ngx-textarea-autosize';
 import { AuthService } from './services/auth.service';
 import { TransactionsService } from './services/transactions.service';
 import { TransactionsIndexComponent } from './component/transactions/transactions-index/transactions-index.component';
+
 import { FooterComponent } from './component/footer/footer.component';
+import { ProductCreateComponent } from './component/product/product-create/product-create.component';
+import { ProductDetailComponent } from './component/product/product-detail/product-detail.component';
+import { ProductsService } from './services/products.service';
+import { ProductIndexComponent } from './component/product/product-index/product-index.component';
 
 const routes = [
   { path: 'registration', component: RegistrationComponent },
@@ -29,6 +34,13 @@ const routes = [
   { path: 'faq', component: FaqComponent },
   { path: 'contact', component: ContactComponent },
   { path: 'transactions', component: TransactionsIndexComponent},
+  { 
+    path: 'products', children: [
+      { path: '' , component: ProductIndexComponent},
+      { path: 'create', component: ProductCreateComponent },
+      { path: 'detail/:id', component: ProductDetailComponent }
+  ] 
+},
   { path: '', component: HomeComponent },
 ];
  
@@ -43,7 +55,9 @@ const routes = [
     ContactComponent,
     TransactionsIndexComponent,
     FooterComponent,  
-
+    ProductCreateComponent,
+    ProductDetailComponent,  
+    ProductIndexComponent
   ],
   imports: [
     BrowserModule,
@@ -61,7 +75,8 @@ const routes = [
   ],
   providers: [
      AuthService,
-     TransactionsService 
+     TransactionsService,
+     ProductsService
    ],
   bootstrap: [AppComponent]
 })

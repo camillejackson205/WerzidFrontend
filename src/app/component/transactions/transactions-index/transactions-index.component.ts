@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { TransactionsService } from '../../../services/transactions.service';
-import { transaction } from '../../../models/Transactions';
+import { Transaction } from '../../../models/Transactions';
 import { MatTableDataSource } from '@angular/material';
 
 @Component({
@@ -13,10 +13,10 @@ export class TransactionsIndexComponent implements OnInit {
   constructor(private transactionService: TransactionsService) { }
 
   ngOnInit() {
-    this.transactionService.getTransactions().subscribe((transactions: transaction[]) =>{
-      this.dataSource = new MatTableDataSource<transaction>(transactions);
+    this.transactionService.getTransactions().subscribe((transactions: Transaction[]) =>{
+      this.dataSource = new MatTableDataSource<Transaction>(transactions);
     });
   }
-columnNames = ['TransactionID', 'OwnerID', 'Quantity', 'ProductID', 'TotalPrice', 'Date', 'Purchased'];
-dataSource: MatTableDataSource<transaction>
+columnNames = ['TransactionID', 'Quantity', 'ProductID', 'TotalPrice', 'Date', 'Purchased'];
+dataSource: MatTableDataSource<Transaction>
 }
