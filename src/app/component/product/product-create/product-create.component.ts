@@ -21,16 +21,15 @@ export class ProductCreateComponent implements OnInit {
 
   createForm() {
     this.productForm = this._form.group({
-      ProductId: new FormControl,
-      Name: new FormControl,
-      Price: new FormControl,
-      Description: new FormControl,
+      ProductName: new FormControl,
+      ProductPrice: new FormControl,
+      ProductDescription: new FormControl,
     });
   }
 
   onSubmit() {
     this._productService.createProduct(this.productForm.value).subscribe(data => {
-      this.router.navigate(['/notes']);
+      this.router.navigate(['/products']);
     });
   }
 }
