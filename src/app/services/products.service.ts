@@ -11,7 +11,7 @@ export class ProductsService {
   constructor(private _http: HttpClient) { }
 
   getProducts() {
-    return this._http.get(`${Api_Url}/Products`, { headers: this.getHeaders() });
+    return this._http.get(`${Api_Url}api/Product`, { headers: this.getHeaders() });
 }
 
 private getHeaders() {

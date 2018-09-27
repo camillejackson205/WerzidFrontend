@@ -9,7 +9,7 @@
   
     <ng-container matColumnDef="details">
       <mat-header-cell *matHeaderCellDef class="matColumnSize"></mat-header-cell>
-      <mat-cell *matCellDef="let note" routerLink="/product/detail/{{product.ProductId}}">
+      <mat-cell *matCellDef="let note" routerLink="product/detail/{{product.ProductId}}">
       <i class="marterial-icon">library_books</i>
       </mat-cell>
     </ng-container>
@@ -20,17 +20,17 @@
    </ng-container> 
 
    <ng-container matColumnDef="Name">
-    <mat-header-cell *matHeaderCellDef> Product ID </mat-header-cell>
+    <mat-header-cell *matHeaderCellDef> Product Name </mat-header-cell>
     <mat-cell *matCellDef="let note"> {{product.Name}} </mat-cell>
   </ng-container>
 
   <ng-container matColumnDef="Price">
-    <mat-header-cell *matHeaderCellDef> Product ID </mat-header-cell>
+    <mat-header-cell *matHeaderCellDef> Product Price </mat-header-cell>
     <mat-cell *matCellDef="let note"> {{product.Price}} </mat-cell>
   </ng-container>
 
   <ng-container matColumnDef="Description">
-    <mat-header-cell *matHeaderCellDef> Product ID </mat-header-cell>
+    <mat-header-cell *matHeaderCellDef> Product Description </mat-header-cell>
     <mat-cell *matCellDef="let note"> {{product.Description}} </mat-cell>
   </ng-container>
 
