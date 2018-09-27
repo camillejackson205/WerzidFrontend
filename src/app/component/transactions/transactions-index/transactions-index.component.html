@@ -19,6 +19,11 @@
         <mat-header-cell *matHeaderCellDef>Quantity</mat-header-cell>
         <mat-cell *matCellDef="let transaction">{{transaction.Quantity}}</mat-cell>
     </ng-container>
+    
+    <ng-container matColumnDef="ProductID">
+            <mat-header-cell *matHeaderCellDef>ProductID</mat-header-cell>
+            <mat-cell *matCellDef="let transaction">{{transaction.ProductID}}</mat-cell>
+        </ng-container>
 
     <ng-container matColumnDef="TotalPrice">
         <mat-header-cell *matHeaderCellDef>TotalPrice</mat-header-cell>
