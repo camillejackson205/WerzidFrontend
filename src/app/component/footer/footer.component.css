@@ -1,4 +1,4 @@
-.footer #button{
+/* .footer #button{
 	width:20px;
 	height:20px;
 	border: lightskyblue 12px solid;
@@ -10,11 +10,20 @@
     -o-transition: all 1s ease;
     -ms-transition: all 1s ease;
     transition: all 1s ease;
-}
+} */
+.footer #button {
+    width: 0; 
+    height: 0; 
+    border-left: 20px solid transparent;
+    border-right: 20px solid transparent;
+	margin:0 auto;
+    
+    border-bottom: 15px solid black;
+  }
 .footer #button:hover{
 	width:35px;
 	height:35px;
-	border: lightslategray 12px solid;
+	border-bottom: transparent 12px solid;
 	-webkit-transition: all 1s ease;
     -moz-transition: all 1s ease;
     -o-transition: all 1s ease;
@@ -43,7 +52,7 @@
     -o-transition: all 1s ease;
     -ms-transition: all 1s ease;
     transition: all 1s ease;
-	height: 8em;
+	height: 7em;
 }
 .footer #container{
 	margin-top:5px;
@@ -52,7 +61,6 @@
     position:relative;
     top:0;
     left:0;
-	background: tra;
 }
 .footer #cont{
     position:relative;
@@ -72,7 +80,9 @@
 	font-size: 15px;
 	font-weight: 100;
 	margin-top:10px;
-	margin-left:40px;
+    margin-left:40px;
+    font-weight: bold;
+    
 }
 .fa {
     margin-top: 65px;
