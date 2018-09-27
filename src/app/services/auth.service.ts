@@ -4,6 +4,7 @@ import { Token } from '../models/token';
 import { Router } from '@angular/router';
 import { Observable, Subject } from 'rxjs';
 import { Api_Url } from '../../environments/environment.prod';
+import { Product } from '../models/Product';
 
 @Injectable({
   providedIn: 'root'
@@ -51,5 +52,9 @@ export class AuthService {
 
   private setHeader(): HttpHeaders {
     return new HttpHeaders().set('Authorization', `Bearer ${localStorage.getItem('id_token')}`);
+  }
+
+  createProduct(product: Product) {
+    return this.http.post(`${Api_Url}/Products`, product, { headers: this.setHeader()});
   }
 }
