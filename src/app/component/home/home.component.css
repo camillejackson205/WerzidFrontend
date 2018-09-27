@@ -1,0 +1,22 @@
+#home-icons{
+    display: flex;
+    text-align: center;
+}
+a i{
+    color: #a2c605;
+    font-size: 4em;
+}
+.home-option {
+    width: 33.33333%;
+    margin: auto;
+    margin-top: 0;
+}
+.home-option h2 {
+    font-size: 1.2em;
+    color: black;
+    text-decoration: none;
+}
+a:hover {
+    text-decoration: none;
+
+}
