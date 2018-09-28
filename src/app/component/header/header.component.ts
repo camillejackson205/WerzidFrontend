@@ -9,7 +9,6 @@ import { Router } from '@angular/router';
 })
 
 export class HeaderComponent implements OnInit {
-  username: string;
   isLoggedIn: boolean;
 
   constructor(public authService: AuthService, private _router: Router) { }
