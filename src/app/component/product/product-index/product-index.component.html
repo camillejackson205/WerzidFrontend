@@ -1,5 +1,4 @@
-<h1>Index</h1>
-<a mat-raised-button color="primary" [routerLink]="['create']">Create A Product</a>
+<h1>Inventory</h1>
 <hr>
 
 <div>
@@ -37,9 +36,12 @@
     <ng-container matColumnDef="buttons">
       <mat-header-cell *matHeaderCellDef> </mat-header-cell>
       <mat-cell *matCellDef="let product">
-        <i mat-icon class="material-icons">Edit</i>
-        <i class="material-icons">Delete</i>
+        <i class="material-icons">shopping_cart</i>
+        <i class="material-icons">edit</i>
+        <i class="material-icons">delete</i>
       </mat-cell>
     </ng-container>
   </mat-table>
 </div>
+<hr>
+<a mat-raised-button color="primary" [routerLink]="['create']">Create A Product</a>

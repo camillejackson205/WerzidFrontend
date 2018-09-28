@@ -4,14 +4,22 @@
       <img src="https://i.imgur.com/MPJVT5l.png">
     </a>
   </span>
+
   <span class="example-fill-remaining-space"></span>
-  <button mat-button class="nav-btn" type="submit" [routerLink]="['registration']">Register</button>
-  <button mat-button class="nav-btn" type="submit" [routerLink]="['login']">Login</button>
+
   <button mat-button class="nav-btn" type="submit" [routerLink]="['faq']">FAQ</button>
   <button mat-button class="nav-btn" type="submit" [routerLink]="['contact']">Contact</button>
-  <button mat-button class="nav-btn" type="submit" [routerLink]="['transactions']">Transactions</button>
-  <button mat-button class="nav-btn" type="submit" [routerLink]="['products']">Products</button>
-  <i class="material-icons">
-    shopping_cart
-  </i>
+  <button mat-button class="nav-btn" type="submit" [routerLink]="['products']">Shop</button>
+
+  <div *ngIf="isLoggedIn">
+    <button mat-button class="nav-btn" type="submit" [routerLink]="['transactions']">Account</button>
+    <i class="material-icons nav-btn">
+      shopping_cart
+    </i>
+    <button mat-button class="nav-btn" type="submit" (click)="onLogout()">Logout</button>
+  </div>
+
+  <div *ngIf="!isLoggedIn">
+    <button mat-button class="nav-btn" type="submit" [routerLink]="['login']">Login</button>
+  </div>
 </mat-toolbar>
