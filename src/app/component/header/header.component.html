@@ -7,20 +7,19 @@
 
   <span class="example-fill-remaining-space"></span>
 
-  <div *ngIf="!isLoggedIn">
-    <button mat-button class="nav-btn" type="submit" [routerLink]="['registration']">Register</button>
-    <button mat-button class="nav-btn" type="submit" [routerLink]="['login']">Login</button>
-  </div>
-
   <button mat-button class="nav-btn" type="submit" [routerLink]="['faq']">FAQ</button>
   <button mat-button class="nav-btn" type="submit" [routerLink]="['contact']">Contact</button>
   <button mat-button class="nav-btn" type="submit" [routerLink]="['products']">Shop</button>
 
   <div *ngIf="isLoggedIn">
     <button mat-button class="nav-btn" type="submit" [routerLink]="['transactions']">Account</button>
-    <i class="material-icons">
+    <i class="material-icons nav-btn">
       shopping_cart
     </i>
     <button mat-button class="nav-btn" type="submit" (click)="onLogout()">Logout</button>
+  </div>
+
+  <div *ngIf="!isLoggedIn">
+    <button mat-button class="nav-btn" type="submit" [routerLink]="['login']">Login</button>
   </div>
 </mat-toolbar>
