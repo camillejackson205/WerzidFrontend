@@ -30,6 +30,8 @@ import { TransactionsCreateComponent } from './component/transactions/transactio
 import { TransactionsDetailComponent } from './component/transactions/transactions-detail/transactions-detail.component';
 import { TransactionsEditComponent } from './component/transactions/transactions-edit/transactions-edit.component';
 import { TransactionsDeleteComponent } from './component/transactions/transactions-delete/transactions-delete.component';
+import { ProductUpdateComponent } from './component/product/product-update/product-update.component';
+import { ProductDeleteComponent } from './component/product/product-delete/product-delete.component';
 
 const routes = [
   { path: 'registration', component: RegistrationComponent },
@@ -44,7 +46,9 @@ const routes = [
     path: 'products', children: [
       { path: '' , component: ProductIndexComponent},
       { path: 'create', component: ProductCreateComponent },
-      { path: 'detail/:id', component: ProductDetailComponent }
+      { path: 'detail/:id', component: ProductDetailComponent },
+      { path: 'update/:id', component: ProductUpdateComponent },
+      { path: 'delete/:id', component: ProductDeleteComponent },
   ] 
 },
 
@@ -74,7 +78,7 @@ const routes = [
     FooterComponent,  
     ProductCreateComponent,
     ProductDetailComponent,  
-    ProductIndexComponent, TransactionsCreateComponent, TransactionsDetailComponent, TransactionsEditComponent, TransactionsDeleteComponent
+    ProductIndexComponent, TransactionsCreateComponent, TransactionsDetailComponent, TransactionsEditComponent, TransactionsDeleteComponent, ProductUpdateComponent, ProductDeleteComponent
   ],
   imports: [
     BrowserModule,

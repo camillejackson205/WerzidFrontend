@@ -25,9 +25,9 @@
       </mat-select>
     </mat-form-field>
 <button mat-button color="primary" type="submit">submit</button>
-<hr>
 
-<!-- <div>
+
+<div>
   <mat-table #table [dataSource]="dataSource">
     <mat-header-row *matHeaderRowDef="columnNames"></mat-header-row>
     <mat-row *matRowDef="let row; columns: columnNames;"></mat-row>
@@ -42,7 +42,7 @@
     <ng-container matColumnDef="ProductID">
       <mat-header-cell *matHeaderCellDef> Product ID </mat-header-cell>
       <mat-cell *matCellDef="let product"> {{product.ProductID}} </mat-cell>
-    </ng-container>
+    </ng-container> 
 
     <ng-container matColumnDef="Name">
       <mat-header-cell *matHeaderCellDef> Product Name </mat-header-cell>
@@ -62,12 +62,13 @@
     <ng-container matColumnDef="buttons">
       <mat-header-cell *matHeaderCellDef> </mat-header-cell>
       <mat-cell *matCellDef="let product">
-        <a mat-button [routerLink]="['transactions']"><i class="material-icons">shopping_cart</i></a>
-         <!-- <i class="material-icons">edit</i>
-        <i class="material-icons">delete</i>  -->
-     <!-- </mat-cell>
+        <!-- <a mat-button [routerLink]="['transactions']"><i class="material-icons">shopping_cart</i></a> -->
+
+          <button mat-button routerLink="/products/update/{{product.ProductID}}"><i mat-icon class="material-icons"  >edit</i></button>
+          <i mat-icon class="material-icons" routerLink="/products/delete/{{product.ProductID}}" >delete</i> 
+      </mat-cell>
     </ng-container>
   </mat-table>
-</div>  -->
-<hr>
+</div> 
+
 <a mat-raised-button color="primary" [routerLink]="['create']">Create A Product</a>
