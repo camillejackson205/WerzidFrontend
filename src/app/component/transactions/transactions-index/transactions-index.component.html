@@ -1,30 +1,32 @@
 <h1>Account History</h1>
 <a mat-raised-button color="primary" style="display:none;">Create New</a>
 
-  <mat-table #table [dataSource] = "dataSource">
-    <mat-header-row *matHeaderRowDef = "columnNames"></mat-header-row>
-    <mat-row *matRowDef = "let row; columns: columnNames"></mat-row>
+<mat-table #table [dataSource]="dataSource">
+    <mat-header-row *matHeaderRowDef="columnNames"></mat-header-row>
+    <mat-row *matRowDef="let row; columns: columnNames"></mat-row>
 
     <ng-container matColumnDef="details">
-      <mat-header-cell *matHeaderCellDef class="matColumnSize"></mat-header-cell>
-      <mat-cell *matCellDef="let transaction" routerLink="/transactions/detail/{{transaction.TransactionId}}"> 
-          <i class="material-icons">library_books</i> </mat-cell>
+        <mat-header-cell *matHeaderCellDef class="matColumnSize"></mat-header-cell>
+        <mat-cell *matCellDef="let transaction" routerLink="/transactions/detail/{{transaction.TransactionId}}">
+            <i class="material-icons">library_books</i> </mat-cell>
     </ng-container>
 
-    <ng-container matColumnDef="TransactionID">
-        <mat-header-cell *matHeaderCellDef>Transaction</mat-header-cell>
-        <mat-cell *matCellDef="let transaction">{{transaction.TransactionID}}</mat-cell>
-    </ng-container>
+    <div>
+        <ng-container matColumnDef="TransactionID">
+            <mat-header-cell *matHeaderCellDef>Transaction</mat-header-cell>
+            <mat-cell *matCellDef="let transaction">{{transaction.TransactionID}}</mat-cell>
+        </ng-container>
+    </div>
 
     <ng-container matColumnDef="Quantity">
         <mat-header-cell *matHeaderCellDef>Quantity</mat-header-cell>
-        <mat-cell *matCellDef="let transaction">{{transaction.Quantity}}</mat-cell>
+        <mat-cell *matCellDef="let transaction">{{transaction.ProductQuantity}}</mat-cell>
     </ng-container>
-    
+
     <ng-container matColumnDef="ProductID">
-            <mat-header-cell *matHeaderCellDef>ProductID</mat-header-cell>
-            <mat-cell *matCellDef="let transaction">{{transaction.ProductID}}</mat-cell>
-        </ng-container>
+        <mat-header-cell *matHeaderCellDef>ProductID</mat-header-cell>
+        <mat-cell *matCellDef="let transaction">{{transaction.ProductID}}</mat-cell>
+    </ng-container>
 
     <ng-container matColumnDef="TotalPrice">
         <mat-header-cell *matHeaderCellDef>TotalPrice</mat-header-cell>
@@ -33,24 +35,23 @@
 
     <ng-container matColumnDef="Date">
         <mat-header-cell *matHeaderCellDef>Date</mat-header-cell>
-        <mat-cell *matCellDef="let transaction">{{transaction.Date}}</mat-cell>
+        <mat-cell *matCellDef="let transaction">{{transaction.PurchaseDate}}</mat-cell>
     </ng-container>
 
     <ng-container matColumnDef="Purchased">
         <mat-header-cell *matHeaderCellDef>Purchased</mat-header-cell>
         <mat-cell *matCellDef="let transaction">
-          <button mat-icon-button disabled>
-            <i class="material-icons" (click) = "Purchased(transaction, $event)" disabled>star</i>
-          </button>
-          </mat-cell>
+            <button mat-icon-button disabled>
+                <i class="material-icons" (click)="Purchased(transaction, $event)" disabled>star</i>
+            </button>
+        </mat-cell>
     </ng-container>
 
     <ng-container matColumnDef="buttons">
         <mat-header-cell *matHeaderCellDef></mat-header-cell>
-        <mat-cell *matCellDef="let transaction">            
-         <i mat-icon class="material-icons" routerLink="/transactions/edit{{transaction.TransactionID}}">edit</i>
-         <i class="material-icons" routerLink="/transactions/delete{{transaction.TransactionID}}">delete</i>
+        <mat-cell *matCellDef="let transaction">
+            <i mat-icon class="material-icons" routerLink="/transactions/edit{{transaction.TransactionID}}">edit</i>
+            <i class="material-icons" routerLink="/transactions/delete{{transaction.TransactionID}}">delete</i>
         </mat-cell>
-    </ng-container>  
-  </mat-table>
-
+    </ng-container>
+</mat-table>

@@ -17,6 +17,6 @@ export class TransactionsIndexComponent implements OnInit {
       this.dataSource = new MatTableDataSource<Transaction>(transactions);
     });
   }
-columnNames = ['TransactionID', 'Quantity', 'ProductID', 'TotalPrice', 'Date', 'Purchased'];
+columnNames = ['ProductID', 'Quantity', 'TotalPrice', 'Date', 'Purchased'];
 dataSource: MatTableDataSource<Transaction>
 }
