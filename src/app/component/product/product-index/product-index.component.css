@@ -1,5 +1,6 @@
 .productImage {
-    width: 150px;
+    width: 100%;
+    max-width: 150px;
     height: 150px;
     padding: 5px;
     border-radius: 25%;

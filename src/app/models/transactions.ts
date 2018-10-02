@@ -4,6 +4,6 @@ export interface Transaction{
     Quantity: number;
     ProductID: number;
     TotalPrice: number;
-    Date: Date;
+    Date: number;
     Purchased: boolean;
 }

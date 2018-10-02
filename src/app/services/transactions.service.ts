@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Api_Url } from '../../environments/environment.prod';
 import { Transaction } from '../models/Transactions';
+import { Observable } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -19,6 +20,10 @@ export class TransactionsService {
   }
 
   createTransaction(transaction: Transaction) {
+    transaction.Date = Date.now();
+    transaction.TotalPrice = transaction.Quantity * 10;
+    transaction.Purchased = false;
+    // transaction.OwnerID = 
     return this.http.post(`${Api_Url}api/Transaction`, transaction, {headers: this.getHeaders()});
   }
 
