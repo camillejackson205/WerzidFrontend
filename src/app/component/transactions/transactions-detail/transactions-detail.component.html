@@ -1,0 +1,25 @@
+<h1>Details</h1>
+  <hr>
+  <div *ngIf="transaction">
+    <div>
+      <label for ="">TransactionID:</label>
+      <span>{{transaction.TransactionID}}</span>
+    </div>
+  </div>
+  <div>
+      <label for ="">Quantity:</label>
+      <span>{{transaction.Quantity}}</span>
+    </div>
+    <div>
+        <label for ="">TotalPrice:</label>
+        <span>{{transaction.TotalPrice}}</span>
+      </div>
+      <div>
+          <label for ="">Date:</label>
+          <span>{{transaction.Date}}</span>
+        </div>
+        <div>
+            <label for ="">Purchased:</label>
+            <span>{{transaction.Purchased}}</span>
+          </div>
+      

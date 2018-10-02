@@ -1,7 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
-import { MatToolbarModule, MatButtonModule, MatFormFieldModule, MatInputModule, MatTableModule } from '@angular/material';
+import { MatToolbarModule, MatButtonModule, MatFormFieldModule, MatInputModule, MatTableModule, MatSelectModule } from '@angular/material';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FormsModule,ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
@@ -26,6 +26,10 @@ import { ProductCreateComponent } from './component/product/product-create/produ
 import { ProductDetailComponent } from './component/product/product-detail/product-detail.component';
 import { ProductsService } from './services/products.service';
 import { ProductIndexComponent } from './component/product/product-index/product-index.component';
+import { TransactionsCreateComponent } from './component/transactions/transactions-create/transactions-create.component';
+import { TransactionsDetailComponent } from './component/transactions/transactions-detail/transactions-detail.component';
+import { TransactionsEditComponent } from './component/transactions/transactions-edit/transactions-edit.component';
+import { TransactionsDeleteComponent } from './component/transactions/transactions-delete/transactions-delete.component';
 
 const routes = [
   { path: 'registration', component: RegistrationComponent },
@@ -34,6 +38,8 @@ const routes = [
   { path: 'faq', component: FaqComponent },
   { path: 'contact', component: ContactComponent },
   { path: 'transactions', component: TransactionsIndexComponent},
+  { path: 'transactions/create', component: TransactionsCreateComponent },
+  { path: 'transactions/:id', component: TransactionsDetailComponent },
   { 
     path: 'products', children: [
       { path: '' , component: ProductIndexComponent},
@@ -41,6 +47,17 @@ const routes = [
       { path: 'detail/:id', component: ProductDetailComponent }
   ] 
 },
+
+{ 
+  path: 'transactions', children: [
+    { path: '' , component: TransactionsIndexComponent},
+    { path: 'create', component: TransactionsCreateComponent },
+    { path: 'detail/:id', component: TransactionsDetailComponent },
+    { path: 'edit/:id', component: TransactionsEditComponent },
+    { path: 'delete/:id', component: TransactionsDeleteComponent }
+] 
+},
+
   { path: '', component: HomeComponent },
 ];
  
@@ -57,7 +74,7 @@ const routes = [
     FooterComponent,  
     ProductCreateComponent,
     ProductDetailComponent,  
-    ProductIndexComponent
+    ProductIndexComponent, TransactionsCreateComponent, TransactionsDetailComponent, TransactionsEditComponent, TransactionsDeleteComponent
   ],
   imports: [
     BrowserModule,
@@ -71,7 +88,9 @@ const routes = [
     ReactiveFormsModule,
     FormsModule,
     HttpClientModule,
-    TextareaAutosizeModule
+    TextareaAutosizeModule,
+    MatSelectModule
+
   ],
   providers: [
      AuthService,
