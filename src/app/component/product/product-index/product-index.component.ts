@@ -42,6 +42,6 @@ export class ProductIndexComponent implements OnInit {
       this.dataSource = new MatTableDataSource<Product>(products);
     });
   }
-  columnNames = ['details', 'Image', 'Name', 'Price', 'Description', 'buttons'];
+  columnNames = ['Image', 'Name', 'Price', 'Description', 'buttons'];
   dataSource: MatTableDataSource<Product>
 }
