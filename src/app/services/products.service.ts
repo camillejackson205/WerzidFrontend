@@ -25,4 +25,12 @@ createProduct(product: Product) {
 getProduct(id: string) {
   return this._http.get(`${Api_Url}api/Product/${id}`, { headers: this.getHeaders() });
 }
+
+updateProduct(product: Product) {
+  return this._http.put(`${Api_Url}api/Product`, product, {headers: this.getHeaders()});
+ }
+
+ deleteProduct(id: number) {
+  return this._http.delete(`${Api_Url}api/Product/${id}`, {headers: this.getHeaders()});
+ }
 }
