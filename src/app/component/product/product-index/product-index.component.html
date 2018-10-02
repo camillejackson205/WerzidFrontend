@@ -1,21 +1,5 @@
 <h1>Product List</h1>
 
-<mat-form-field>
-  <mat-select placeholder="Werzid Name">
-    <mat-option *ngFor="let product of products" [value]="product.value">
-      {{product.viewValue}}
-    </mat-option>
-  </mat-select>
-</mat-form-field>
-<mat-form-field>
-  <mat-select placeholder="Quantity">
-    <mat-option *ngFor="let number of numbers" [value]="number.value">
-      {{number.viewValue}}
-    </mat-option>
-  </mat-select>
-</mat-form-field>
-<button mat-button color="primary" type="submit">submit</button>
-
 <div>
   <mat-table #table [dataSource]="dataSource">
     <mat-header-row *matHeaderRowDef="columnNames"></mat-header-row>
@@ -38,7 +22,7 @@
 
     <ng-container matColumnDef="Price">
       <mat-header-cell *matHeaderCellDef> Product Price </mat-header-cell>
-      <mat-cell *matCellDef="let product"> {{product.ProductPrice}} </mat-cell>
+      <mat-cell *matCellDef="let product"> ${{product.ProductPrice}} </mat-cell>
     </ng-container>
 
     <ng-container matColumnDef="Description">

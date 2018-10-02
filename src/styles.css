@@ -8,3 +8,10 @@ body {
     background-attachment: fixed;
     height: 100%;
 }
+.mat-header-row{
+    border: none;
+}
+.mat-row {
+    border-top: solid 1px rgb(215,215,215);
+    border-bottom: none;
+}

@@ -39,32 +39,32 @@ const routes = [
   { path: 'home', component: HomeComponent },
   { path: 'faq', component: FaqComponent },
   { path: 'contact', component: ContactComponent },
-  { path: 'transactions', component: TransactionsIndexComponent},
+  { path: 'transactions', component: TransactionsIndexComponent },
   { path: 'transactions/create', component: TransactionsCreateComponent },
   { path: 'transactions/:id', component: TransactionsDetailComponent },
-  { 
+  {
     path: 'products', children: [
-      { path: '' , component: ProductIndexComponent},
+      { path: '', component: ProductIndexComponent },
       { path: 'create', component: ProductCreateComponent },
       { path: 'detail/:id', component: ProductDetailComponent },
       { path: 'update/:id', component: ProductUpdateComponent },
       { path: 'delete/:id', component: ProductDeleteComponent },
-  ] 
-},
+    ]
+  },
 
-{ 
-  path: 'transactions', children: [
-    { path: '' , component: TransactionsIndexComponent},
-    { path: 'create', component: TransactionsCreateComponent },
-    { path: 'detail/:id', component: TransactionsDetailComponent },
-    { path: 'edit/:id', component: TransactionsEditComponent },
-    { path: 'delete/:id', component: TransactionsDeleteComponent }
-] 
-},
+  {
+    path: 'transactions', children: [
+      { path: '', component: TransactionsIndexComponent },
+      { path: 'create', component: TransactionsCreateComponent },
+      { path: 'detail/:id', component: TransactionsDetailComponent },
+      { path: 'edit/:id', component: TransactionsEditComponent },
+      { path: 'delete/:id', component: TransactionsDeleteComponent }
+    ]
+  },
 
   { path: '', component: HomeComponent },
 ];
- 
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -75,9 +75,9 @@ const routes = [
     FaqComponent,
     ContactComponent,
     TransactionsIndexComponent,
-    FooterComponent,  
+    FooterComponent,
     ProductCreateComponent,
-    ProductDetailComponent,  
+    ProductDetailComponent,
     ProductIndexComponent, TransactionsCreateComponent, TransactionsDetailComponent, TransactionsEditComponent, TransactionsDeleteComponent, ProductUpdateComponent, ProductDeleteComponent
   ],
   imports: [
@@ -96,10 +96,10 @@ const routes = [
 
   ],
   providers: [
-     AuthService,
-     TransactionsService,
-     ProductsService
-   ],
+    AuthService,
+    TransactionsService,
+    ProductsService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

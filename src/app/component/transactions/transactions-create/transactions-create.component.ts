@@ -12,7 +12,9 @@ export class TransactionsCreateComponent implements OnInit {
 
   transactionForm: FormGroup;
 
-  constructor(private _transactionsService: TransactionsService, private _form: FormBuilder, private _router: Router) { 
+  constructor(private _transactionsService: TransactionsService,
+    private _form: FormBuilder,
+    private _router: Router) { 
   }
   
   ngOnInit() {
@@ -21,13 +23,8 @@ export class TransactionsCreateComponent implements OnInit {
 
   createForm(){
     this.transactionForm = this._form.group({
-      // TransactionID: new FormControl,
-      // OwnerID: new FormControl,
       ProductID: new FormControl,
       ProductQuantity: new FormControl,
-      // TotalPrice: new FormControl,
-      // Date: new FormControl,
-      // Purchased: new FormControl
     });
   }
 
