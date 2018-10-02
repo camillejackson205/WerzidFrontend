@@ -23,6 +23,7 @@ export class ProductCreateComponent implements OnInit {
       ProductName: new FormControl,
       ProductPrice: new FormControl,
       ProductDescription: new FormControl,
+      ProductImagePath: new FormControl
     });
   }
 

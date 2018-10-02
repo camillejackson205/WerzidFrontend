@@ -1,42 +1,29 @@
 <h1>Product List</h1>
 
-    <mat-form-field>
-      <mat-select placeholder="Werzid Color">
-        <mat-option *ngFor="let food of foods" [value]
-        ="food.value">
-          {{food.viewValue}}
-        </mat-option>
-      </mat-select>
-    </mat-form-field>
 <mat-form-field>
-    <mat-select placeholder="Quantity">
-      <mat-option *ngFor="let food of foods" [value]
-      ="food.value">
-        {{food.viewValue}}
-      </mat-option>
-    </mat-select>
-  </mat-form-field>
-  <mat-form-field>
-      <mat-select placeholder="Price">
-        <mat-option *ngFor="let food of foods" [value]
-        ="food.value">
-          {{food.viewValue}}
-        </mat-option>
-      </mat-select>
-    </mat-form-field>
+  <mat-select placeholder="Werzid Name">
+    <mat-option *ngFor="let product of products" [value]="product.value">
+      {{product.viewValue}}
+    </mat-option>
+  </mat-select>
+</mat-form-field>
+<mat-form-field>
+  <mat-select placeholder="Quantity">
+    <mat-option *ngFor="let number of numbers" [value]="number.value">
+      {{number.viewValue}}
+    </mat-option>
+  </mat-select>
+</mat-form-field>
 <button mat-button color="primary" type="submit">submit</button>
-
 
 <div>
   <mat-table #table [dataSource]="dataSource">
     <mat-header-row *matHeaderRowDef="columnNames"></mat-header-row>
     <mat-row *matRowDef="let row; columns: columnNames;"></mat-row>
 
-    <ng-container matColumnDef="details">
-      <mat-header-cell *matHeaderCellDef class="matColumnSize"></mat-header-cell>
-      <mat-cell *matCellDef="let product" routerLink="product/detail/{{product.ProductId}}">
-        <i class="material-icons">library_books</i>
-      </mat-cell>
+    <ng-container matColumnDef="Image">
+      <mat-header-cell *matHeaderCellDef> Product Image </mat-header-cell>
+      <mat-cell *matCellDef="let product"> <img src="{{product.ProductImagePath}}" class="productImage"> </mat-cell>
     </ng-container>
 
     <ng-container matColumnDef="ProductID">

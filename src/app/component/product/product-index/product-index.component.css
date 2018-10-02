@@ -1,0 +1,9 @@
+.productImage {
+    width: 150px;
+    height: 150px;
+    padding: 5px;
+    border-radius: 25%;
+}
+.mat-table {
+    background-color: transparent;
+}
