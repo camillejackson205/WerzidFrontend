@@ -21,7 +21,13 @@ export class TransactionsCreateComponent implements OnInit {
 
   createForm(){
     this.transactionForm = this._form.group({
+      // TransactionID: new FormControl,
+      // OwnerID: new FormControl,
+      ProductID: new FormControl,
       Quantity: new FormControl,
+      // TotalPrice: new FormControl,
+      // Date: new FormControl,
+      // Purchased: new FormControl
     });
   }
 
@@ -30,5 +36,4 @@ export class TransactionsCreateComponent implements OnInit {
       this._router.navigate(['/transactions']);
     })
   }
-
 }

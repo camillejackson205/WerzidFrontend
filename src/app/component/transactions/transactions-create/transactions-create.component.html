@@ -1,8 +1,13 @@
-<form #f="ngForm" (ngSubmit)="onSubmit(f)" [formGroup]="noteForm">
+<form #f="ngForm" (ngSubmit)="onSubmit(f)" [formGroup]="transactionForm">
   <div>
     <div>
       <mat-form-field>
-        <input matInput placeholder="Quantity" formControlName="Quantity" type="Quantity" required/>
+        <input matInput placeholder="ProductID" formControlName="ProductID" type="number" required/>
+      </mat-form-field>
+    </div>
+    <div>
+      <mat-form-field>
+        <input matInput placeholder="Quantity" formControlName="Quantity" type="number" required/>
       </mat-form-field>
     </div>
   </div>

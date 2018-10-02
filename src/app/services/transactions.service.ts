@@ -11,7 +11,7 @@ export class TransactionsService {
   constructor(private http: HttpClient ) { }
 
   getTransactions(){
-    return this.http.get(`${Api_Url}/api/Transaction`, {headers: this.getHeaders() });
+    return this.http.get(`${Api_Url}api/Transaction`, {headers: this.getHeaders() });
   }
 
   private getHeaders(){
@@ -19,18 +19,18 @@ export class TransactionsService {
   }
 
   createTransaction(transaction: Transaction) {
-    return this.http.post(`${Api_Url}/Transactions`, transaction, {headers: this.getHeaders()});
+    return this.http.post(`${Api_Url}api/Transaction`, transaction, {headers: this.getHeaders()});
   }
 
   getTransaction(id: string) {
-   return this.http.get(`${Api_Url}/Transactions${id}`, {headers: this.getHeaders()});
+   return this.http.get(`${Api_Url}api/Transaction/${id}`, {headers: this.getHeaders()});
   }
 
   updateTransaction(transaction: Transaction) {
-    return this.http.put(`${Api_Url}/Transactions`, transaction, {headers: this.getHeaders()});
+    return this.http.put(`${Api_Url}api/Transaction`, transaction, {headers: this.getHeaders()});
    }
 
    deleteTransaction(id: number) {
-    return this.http.delete(`${Api_Url}/Transactions${id}`, {headers: this.getHeaders()});
+    return this.http.delete(`${Api_Url}api/Transaction/${id}`, {headers: this.getHeaders()});
    }
 }
