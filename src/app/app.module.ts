@@ -1,7 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
-import { MatToolbarModule, MatButtonModule, MatFormFieldModule, MatInputModule, MatTableModule } from '@angular/material';
+import { MatToolbarModule, MatButtonModule, MatFormFieldModule, MatInputModule, MatTableModule, MatSelectModule } from '@angular/material';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FormsModule,ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
@@ -39,7 +39,7 @@ const routes = [
   { path: 'contact', component: ContactComponent },
   { path: 'transactions', component: TransactionsIndexComponent},
   { path: 'transactions/create', component: TransactionsCreateComponent },
-  // { path: 'transactions/:id', component: TransactionsDetailComponent },
+  { path: 'transactions/:id', component: TransactionsDetailComponent },
   { 
     path: 'products', children: [
       { path: '' , component: ProductIndexComponent},
@@ -88,7 +88,9 @@ const routes = [
     ReactiveFormsModule,
     FormsModule,
     HttpClientModule,
-    TextareaAutosizeModule
+    TextareaAutosizeModule,
+    MatSelectModule
+
   ],
   providers: [
      AuthService,
