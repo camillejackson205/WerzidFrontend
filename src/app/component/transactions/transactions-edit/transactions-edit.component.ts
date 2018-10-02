@@ -19,38 +19,29 @@ export class TransactionsEditComponent implements OnInit {
   editTransactionForm: FormGroup;
 
   constructor(private _form: FormBuilder,
-  private _transactionService: TransactionsService,
-private _ar: ActivatedRoute,
-private _router: Router) {
-  
-  this._ar.paramMap.subscribe(p => {
-    this._transactionService.getTransaction(p.get('id')).subscribe((singleTransaction: Transaction) => {
-      this.transaction = singleTransaction;
-      this.createForm();
+    private _transactionService: TransactionsService,
+    private _ar: ActivatedRoute,
+    private _router: Router) {
+
+    this._ar.paramMap.subscribe(p => {
+      this._transactionService.getTransaction(p.get('id')).subscribe((singleTransaction: Transaction) => {
+        this.transaction = singleTransaction;
+        this.createForm();
+      });
     });
-  });
- }
+  }
 
   ngOnInit() {
   }
 
-  createForm(){
+  createForm() {
     this.editTransactionForm = this._form.group({
-      Quantity: new FormControl(this.transaction.Quantity)
+      ProductQuantity: new FormControl(this.transaction.ProductQuantity),
     });
   }
 
-  onSubmit(form) {
-    const updateTransaction: Transaction = {
-      TransactionID: form.value.TransactionID,
-      OwnerID: form.value.OwnerID,
-      Quantity: form.value.Quantity,
-      ProductID: form.value.ProductID,
-      TotalPrice: form.value.TotalPrice,
-      Date: form.value.Date,
-      Purchased: form.value.Purchased
-    };
-    this._transactionService.updateTransaction(updateTransaction).subscribe(d => {
+  onSubmit() {
+    this._transactionService.updateTransaction(this.editTransactionForm.value).subscribe(d => {
       this._router.navigate(['/transactions']);
     });
   }

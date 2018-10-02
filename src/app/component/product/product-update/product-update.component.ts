@@ -44,7 +44,7 @@ export class ProductUpdateComponent implements OnInit {
     });
   }
 
-  onSubmit(form) {
+  onSubmit() {
     this._productService.updateProduct(this.editProductForm.value).subscribe(d => {
       this._router.navigate(['/products']);
     });

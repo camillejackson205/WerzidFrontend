@@ -5,7 +5,7 @@ switch (window.location.hostname) {
     Api_Url += 'https://werzid.azurewebsites.net/';
     break;
   default:
-   Api_Url += 'https://werzid.azurewebsites.net/';
+    Api_Url += 'https://werzid.azurewebsites.net/';
 }
 export const environment = {
   production: true
