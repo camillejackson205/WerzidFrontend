@@ -1,7 +1,33 @@
 <h1>Product List</h1>
+
+    <mat-form-field>
+      <mat-select placeholder="Werzid Color">
+        <mat-option *ngFor="let food of foods" [value]
+        ="food.value">
+          {{food.viewValue}}
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+<mat-form-field>
+    <mat-select placeholder="Quantity">
+      <mat-option *ngFor="let food of foods" [value]
+      ="food.value">
+        {{food.viewValue}}
+      </mat-option>
+    </mat-select>
+  </mat-form-field>
+  <mat-form-field>
+      <mat-select placeholder="Price">
+        <mat-option *ngFor="let food of foods" [value]
+        ="food.value">
+          {{food.viewValue}}
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+<button mat-button color="primary" type="submit">submit</button>
 <hr>
 
-<div>
+<!-- <div>
   <mat-table #table [dataSource]="dataSource">
     <mat-header-row *matHeaderRowDef="columnNames"></mat-header-row>
     <mat-row *matRowDef="let row; columns: columnNames;"></mat-row>
@@ -36,12 +62,12 @@
     <ng-container matColumnDef="buttons">
       <mat-header-cell *matHeaderCellDef> </mat-header-cell>
       <mat-cell *matCellDef="let product">
-        <i class="material-icons" [routerLink]="['../transactions/create']">shopping_cart</i>
-        <i class="material-icons">edit</i>
-        <i class="material-icons">delete</i>
-      </mat-cell>
+        <a mat-button [routerLink]="['transactions']"><i class="material-icons">shopping_cart</i></a>
+         <!-- <i class="material-icons">edit</i>
+        <i class="material-icons">delete</i>  -->
+     <!-- </mat-cell>
     </ng-container>
   </mat-table>
-</div>
+</div>  -->
 <hr>
 <a mat-raised-button color="primary" [routerLink]="['create']">Create A Product</a>
