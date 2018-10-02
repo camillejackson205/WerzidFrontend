@@ -3,7 +3,7 @@ import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
 import { MatToolbarModule, MatButtonModule, MatFormFieldModule, MatInputModule, MatTableModule, MatSelectModule } from '@angular/material';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { FormsModule,ReactiveFormsModule } from '@angular/forms';
+import { ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 
 // Components:
@@ -90,7 +90,6 @@ const routes = [
     BrowserAnimationsModule,
     RouterModule.forRoot(routes),
     ReactiveFormsModule,
-    FormsModule,
     HttpClientModule,
     TextareaAutosizeModule,
     MatSelectModule

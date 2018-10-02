@@ -6,7 +6,6 @@ import { ProductsService } from '../../../services/products.service';
 import { ActivatedRoute } from '@angular/router';
 import { Router } from '@angular/router';
 import { FormControl } from '@angular/forms';
-import { Form } from '@angular/forms';
 
 @Component({
   selector: 'app-product-update',
@@ -20,38 +19,41 @@ export class ProductUpdateComponent implements OnInit {
   editProductForm: FormGroup;
 
   constructor(private _form: FormBuilder,
-  private _productService: ProductsService,
-private _ar: ActivatedRoute,
-private _router: Router) {
-  
-  this._ar.paramMap.subscribe(p => {
-    this._productService.getProduct(p.get('id')).subscribe((singleProduct: Product) => {
-      this.product = singleProduct;
-      this.createForm();
+    private _productService: ProductsService,
+    private _ar: ActivatedRoute,
+    private _router: Router) {
+
+    this._ar.paramMap.subscribe(p => {
+      this._productService.getProduct(p.get('id')).subscribe((singleProduct: Product) => {
+        this.product = singleProduct;
+        this.createForm();
+      });
     });
-  });
- }
+  }
 
   ngOnInit() {
   }
 
-  createForm(){
+  createForm() {
     this.editProductForm = this._form.group({
-      Name: new FormControl(this.product.Name),
-      Price: new FormControl(this.product.Price),
-      Description: new FormControl(this.product.Description)
+      ProductID: new FormControl(this.product.ProductID),
+      ProductName: new FormControl(this.product.ProductName),
+      ProductPrice: new FormControl(this.product.ProductPrice),
+      ProductDescription: new FormControl(this.product.ProductDescription),
+      ProductImagePath: new FormControl(this.product.ProductImagePath)
     });
   }
 
   onSubmit(form) {
-    const updateProduct: Product = {
-      ProductID: form.value.ProductID,
-      Name: form.value.Name,
-      Price: form.value.Price,
-      Description: form.value.Description
-    };
-    this._productService.updateProduct(updateProduct).subscribe(d => {
-      this._router.navigate(['/Product']);
+    // const updateProduct: Product = {
+    //   ProductID: form.value.ProductID,
+    //   Name: form.value.ProductName,
+    //   Price: form.value.ProductPrice,
+    //   Description: form.value.ProductDescription,
+    //   Image: form.value.ProductImagePath
+    // };
+    this._productService.updateProduct(this.editProductForm.value).subscribe(d => {
+      this._router.navigate(['/products']);
     });
   }
 

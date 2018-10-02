@@ -1,32 +1,32 @@
 <h1>Edit a Product:</h1>
 
 <div *ngIf="product">
-  <form #f="ngForm" (ngSubmit)="onSubmit(f)" [formGroup]="editProductForm">
+  <form #f="ngForm" (ngSubmit)="onSubmit()" [formGroup]="editProductForm">
     <div>
-      <div hidden>
+      <div>
         <mat-form-field>
           <input matInput placeholder="ProductID" formControlName="ProductID" type="ProductID" required [value]="product.ProductID" />
         </mat-form-field>
       </div>
-      <div hidden>
-        <button mat-icon-button disabled>
-          <i class="material-icons" (click)="isStarred(product, $event)" disabled>star</i>
-        </button>
-      </div>
 
       <div>
         <mat-form-field>
-          <input matInput placeholder="Name" formControlName="Name" type="Name" required [value]="product.Name" />
+          <input matInput placeholder="Name" formControlName="ProductName" type="ProductName" required [value]="product.ProductName" />
         </mat-form-field>
       </div>
       <div>
         <mat-form-field>
-          <input matInput placeholder="Price" formControlName="Price" type="Price" required [value]="product.Price" />
+          <input matInput placeholder="Price" formControlName="ProductPrice" type="ProductPrice" required [value]="product.ProductPrice" />
         </mat-form-field>
       </div>
       <div>
         <mat-form-field>
-          <input matInput placeholder="Description" formControlName="Description" type="Description" required [value]="product.Description" />
+          <input matInput placeholder="Description" formControlName="ProductDescription" type="ProductDescription" required [value]="product.ProductDescription" />
+        </mat-form-field>
+      </div>
+      <div>
+        <mat-form-field>
+          <input matInput placeholder="Image Path" formControlName="ProductImagePath" type="ProductImagePath" required [value]="product.ProductImagePath" />
         </mat-form-field>
       </div>
     </div>
