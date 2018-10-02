@@ -51,8 +51,9 @@
       <mat-cell *matCellDef="let product">
         <!-- <a mat-button [routerLink]="['transactions']"><i class="material-icons">shopping_cart</i></a> -->
 
+          <button mat-button routerLink="/products/update/{{product.ProductID}}"><i mat-icon class="material-icons"  >shopping_cart</i></button>
           <button mat-button routerLink="/products/update/{{product.ProductID}}"><i mat-icon class="material-icons"  >edit</i></button>
-          <i mat-icon class="material-icons" routerLink="/products/delete/{{product.ProductID}}" >delete</i> 
+          <button mat-button routerLink="/products/delete/{{product.ProductID}}"><i mat-icon class="material-icons"  >delete</i></button>
       </mat-cell>
     </ng-container>
   </mat-table>

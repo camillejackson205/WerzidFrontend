@@ -45,16 +45,8 @@ export class ProductUpdateComponent implements OnInit {
   }
 
   onSubmit(form) {
-    // const updateProduct: Product = {
-    //   ProductID: form.value.ProductID,
-    //   Name: form.value.ProductName,
-    //   Price: form.value.ProductPrice,
-    //   Description: form.value.ProductDescription,
-    //   Image: form.value.ProductImagePath
-    // };
     this._productService.updateProduct(this.editProductForm.value).subscribe(d => {
       this._router.navigate(['/products']);
     });
   }
-
 }
