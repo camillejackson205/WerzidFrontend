@@ -1,9 +1,9 @@
 export interface Transaction{
     TransactionID: number;
-    OwnerID: number;
-    Quantity: number;
+    ProductQuantity: number;
     ProductID: number;
+    ProductName: string;
     TotalPrice: number;
-    Date: number;
+    PurchaseDate: Date;
     Purchased: boolean;
 }

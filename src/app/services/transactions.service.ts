@@ -20,10 +20,6 @@ export class TransactionsService {
   }
 
   createTransaction(transaction: Transaction) {
-    transaction.Date = Date.now();
-    transaction.TotalPrice = transaction.Quantity * 10;
-    transaction.Purchased = false;
-    // transaction.OwnerID = 
     return this.http.post(`${Api_Url}api/Transaction`, transaction, {headers: this.getHeaders()});
   }
 

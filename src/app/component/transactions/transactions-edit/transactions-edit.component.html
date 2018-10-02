@@ -2,11 +2,11 @@
 <hr>
 
 <div *ngIf="transaction">
-  <form #f="ngForm" (ngSubmit)= "onSubmit(f)" [formGroup]= "editTransactionForm">
+  <form #f="ngForm" (ngSubmit)= "onSubmit()" [formGroup]= "editTransactionForm">
     <div>
       <div hidden>
         <mat-form-field>
-          <input matInput placeholder="Quantity" formControlName="Quantity" type="Quantity" required [value] ="transaction.Quantity" />
+          <input matInput placeholder="ProductQuantity" formControlName="ProductQuantity" type="ProductQuantity" required [value] ="transaction.ProductQuantity" />
         </mat-form-field>
       </div>
     </div>
