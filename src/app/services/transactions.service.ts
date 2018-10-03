@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Api_Url } from '../../environments/environment.prod';
-import { Transaction } from '../models/Transactions';
+import { Transaction } from '../models/transactions';
 import { Observable } from 'rxjs';
 
 @Injectable({

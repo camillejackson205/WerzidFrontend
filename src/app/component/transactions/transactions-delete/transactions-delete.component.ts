@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { TransactionsService } from '../../../services/transactions.service';
 import { Router } from '@angular/router';
-import { Transaction } from '../../../models/Transactions';
+import { Transaction } from '../../../models/transactions';
 
 @Component({
   selector: 'app-transactions-delete',
