@@ -10,7 +10,7 @@ import { Router } from '@angular/router';
 })
 export class ProductCreateComponent implements OnInit {
 
-  private productForm: FormGroup;
+  public productForm: FormGroup;
 
   constructor(private _productService: ProductsService, private _form: FormBuilder, private router: Router) { }
 
